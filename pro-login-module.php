@@ -18,13 +18,13 @@ if (!defined('ABSPATH')) {
 }
 
 // Start session globally
-add_action('init', function() {
+add_action('init', function () {
     if (!session_id()) {
         session_start();
     }
 }, 1);
 
-add_action('plugins_loaded', function() {
+add_action('plugins_loaded', function () {
     load_plugin_textdomain('pro-login-module', false, dirname(plugin_basename(__FILE__)) . '/languages');
 });
 
@@ -57,8 +57,9 @@ register_activation_hook(__FILE__, ['ProLogin\\Core\\Activator', 'activate']);
 register_deactivation_hook(__FILE__, ['ProLogin\\Core\\Deactivator', 'deactivate']);
 
 // Run the Plugin
-function run_pro_login_module() {
-    $plugin = new ProLogin\\Core\\Loader();
+function run_pro_login_module()
+{
+    $plugin = new ProLogin\Core\Loader();
     $plugin->run();
 }
 run_pro_login_module();
