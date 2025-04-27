@@ -1,14 +1,15 @@
 === Pro Login Module ===
 Contributors: mliton
 Tags: login, register, user profile, email verification, ajax login
-Requires at least: 5.5
-Tested up to: 6.5
+Requires at least: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 A professional login, registration, and profile management plugin with AJAX support and email verification.
+
 
 == Description ==
 

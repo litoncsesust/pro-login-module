@@ -2,10 +2,16 @@
 /*
 Plugin Name: Pro Login Module
 Description: A professional login, registration, and profile management plugin.
-Version: 1.0
+Version: 1.0.0
 Author: Mohammad Liton
-Url: https://www.linkedin.com/in/litonmohammad/
+Author URI: https://www.linkedin.com/in/litonmohammad/
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pro-login-module
+Domain Path: /languages
 */
+
+
 
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
@@ -17,6 +23,11 @@ add_action('init', function() {
         session_start();
     }
 }, 1);
+
+add_action('plugins_loaded', function() {
+    load_plugin_textdomain('pro-login-module', false, dirname(plugin_basename(__FILE__)) . '/languages');
+});
+
 
 // Plugin Constants
 define('PRO_LOGIN_MODULE_PATH', plugin_dir_path(__FILE__));
